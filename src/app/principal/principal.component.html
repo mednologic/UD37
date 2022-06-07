@@ -1,0 +1,25 @@
+<div class= "row d-inline-flex" *ngIf ="personajes !=null; else espera">
+      <!-- Grid cards-->
+      <div class="card-deck ">
+          <!-- For para recorrer los datos-->
+          <div style="width: 18rem;" *ngFor="let personaje of personajes">
+              <!-- Carta -->
+            <div class="card text-center rounded m-2 " >
+                <div>
+                  <!--Imagen-->
+                  <img src={{personaje.image}} class="card-img-top" alt="Foto personaje">
+                </div>
+                <div class="text-center">
+                  <!--Nombre-->
+                  <h5 class="card-title">{{personaje.name}}</h5>
+                </div>
+                <div class="col-md-12 text-center">
+                  <!--Boton-->
+                  <a href="#" class="btn btn-warning m-2 col-10">See more</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+<!-- funcion para esperar la descarga de datos-->
+<ng-template #espera>Esperando Datos...</ng-template>
