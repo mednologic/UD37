@@ -1,0 +1,27 @@
+<h1>Personajes</h1>
+<div class="container mt-3">
+  <div class="row">
+      <h1 style="text-align:center; margin-top: 3%;">Personajes Rick&Morty</h1>
+      <div class="col-md-12" id="contenedor" *ngIf="pjs!=null; else espera">
+          <div class="card" style="width: 18rem;" *ngFor="let personaje of pjs">
+              <img src={{personaje.image}} class="card-img-top" alt="...">
+              <div class="card-body">
+                  <!-- Pipe para poner en mayúsculas el nombre del personajes -->
+                  <h5 class="card-title">{{personaje.name | uppercase}}</h5>
+                  <p>
+                      Name: {{personaje.name}}
+
+                      <br> Status: {{personaje.status}}
+
+                      <br> Species: {{personaje.species}}
+
+                      <br> Gender: {{personaje.gender}}
+
+                  </p>
+                  <a href="#" class="btn btn-success">Show Information</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>

@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { PersonajesComponent } from './personajes/personajes.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     PrincipalComponent,
     AboutComponent,
     HomeComponent,
+    PersonajesComponent,
   ],
   imports: [
     BrowserModule,
